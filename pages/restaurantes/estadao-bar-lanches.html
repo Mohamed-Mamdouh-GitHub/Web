@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../../images/GulliverTravellerMenu.png">
+		<title>Estadão Bar e Lanches</title>
+
+		<!------ Css ------>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link rel="stylesheet" href="../../css/style.css">
+
+		<!----- Icons ----->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-blue fixed-top">
+				<div class="container-fluid">
+					<a href="../../index.html" class="navbar-brand ps-3">
+						<img src="../../images/GulliverTravellerMenu.png" alt="Logo Gulliver Traveller">
+					</a>
+					<button type="button" class="navbar-toggler ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-md-center" id="navbarTogglerDemo02">
+						<ul class="navbar-nav">
+							<li class="nav-item"><a href="../locadora.html" class="nav-link active">Aluguel de carros</a></li>                        
+                            <li class="nav-item"><a href="../cultura.html" class="nav-link">Cultura</a></li>
+                            <li class="nav-item"><a href="../entretenimento.html" class="nav-link">Entretenimento</a></li>
+                            <li class="nav-item"><a href="../restaurantes.html" class="nav-link">Gastronomia</a></li>
+                            <li class="nav-item"><a href="../historia.html" class="nav-link">História</a></li>
+                            <li class="nav-item"><a href="../hoteis.html" class="nav-link">Hotéis</a></li>
+                            <li class="nav-item"><a href="../parques.html" class="nav-link">Parques</a></li>
+                            <li class="nav-item"><a href="../vida_noturna.html" class="nav-link">Vida noturna</a></li>
+						</ul>
+					</div>
+
+					<!--- Accessibility --->
+                    <div class="nav-item ps-2 pe-2">
+                        <div class="btn-group">
+                            <a href="#" class="dropdown-toggle" id="accessibility" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                <i class="fas fa-universal-access"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accessibility">
+                                <li class="dropdown-item dark-theme">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="chk">
+                                        <label class="form-check-label" for="chk">Contraste</label>
+                                    </div>
+                                </li>
+                                <li><a href="#" class="dropdown-item" onclick="aumenta()"><i class="bi bi-zoom-in text-end pe-1"></i>Aumenta Fonte</a></li>
+                                <li><a href="#" class="dropdown-item" onclick="diminui()"><i class="bi bi-zoom-out text-end pe-1"></i>Diminui Fonte</a></li>
+                                <li><a href="#" class="dropdown-item" onclick="dislexia()"><i class="bi bi-type pe-1"></i>Fonte Dislexia</a></li>
+                                <li><a href="#" class="dropdown-item" onclick="roboto()"><i class="bi bi-type pe-1"></i>Fonte Padrão</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+					<!------- Login ------->
+					<div class="nav-item login ps-3 pe-3">
+						<a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+							aria-controls="offcanvasNavbar">
+							<i class="bi bi-person-circle"></i>
+						</a>
+					</div>
+				</div>
+			</nav>
+
+			<!----- Offcanvas ----->
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Login</h5>
+					<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Entrar</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Cadastre-se</button>
+						</li>
+					</ul>
+					<div class="tab-content" id="pills-tabContent">
+
+						<!------ Sign in ------>
+						<div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+							aria-labelledby="pills-home-tab">
+							<form method="" action="" autocomplete="off">
+								<div class="form-floating mb-3">
+									<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="name@example.com">
+									<label for="floatingInput">Email address</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="password" class="form-control" id="floatingPassword" placeholder="Password" value="123456">
+									<label for="floatingPassword">Password</label>
+								</div>
+								<div class="text-end">
+									<button type="submit" class="btn btn-success w-50">Login</button>
+								</div>
+							</form>
+						</div>
+
+						<!------ Sign up ------>
+						<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+							<form method="" action="" autocomplete="off">
+								<div class="form-floating mb-3">
+									<input type="email" class="form-control" id="floatingInput" placeholder="Usuário" value="user">
+									<label for="floatingInput">User</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="name@example.com">
+									<label for="floatingInput">Email address</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="password" class="form-control" id="floatingPassword" placeholder="Password" value="123456">
+									<label for="floatingPassword">Password</label>
+								</div>
+								<div class="text-end">
+									<button type="submit" class="btn btn-green w-50">Cadastrar</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<!------- Conteúdo ------->
+		<main class="main-page container">
+			<section class="mb-4">
+				<h1 class="text-center">Estadão Bar e Lanches</h1>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+						<li class="breadcrumb-item"><a href="../destino.html">Destino</a></li>
+						<li class="breadcrumb-item"><a href="../restaurantes.html">Gastronomia</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Estadão Bar e Lanches</li>
+					</ol>
+				</nav>
+			</section>
+			<article class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2">
+				<div class="col">
+				
+					<!------- Descrição ------->
+					<p class="text-left">
+                        Abertos 24hrs oferecendo os melhores sanduíches e pratos, em destaque a nossa feijoada,
+                        servida a partir de terças feiras as 18hrs ate as 18hrs da Quarta feira, alem de sexta e sábado.
+                        Pratos do dia, saladas, e o Melhor Pernil de São Paulo...
+                    </p>
+
+					<!------ Avaliações ------>
+					<div class="row mb-4">
+						<div class="col-md-6">
+							<h6>25.802 avaliações, nota 4,6 estrelas</h6>
+							<div class="card-rate">
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-half text-warning"></i>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+								<button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#modal-comentarios">Comentários</button>
+							</div>
+						</div>
+					</div>
+
+					<!--- Modal Avaliações --->
+					<div class="modal fade" id="modal-comentarios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg modal-dialog-scrollable">
+							<div class="modal-content">
+								<div class="modal-header">
+								  <h5 class="modal-title" id="staticBackdropLabel">Todas as avaliações</h5>
+								  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<div class="collapse" id="collapseExample">
+										<div class="form-floating">
+											<textarea class="form-control" id="floatingTextarea2"></textarea>
+											<label for="floatingTextarea2">Deixe seu comentário...</label>
+										</div>
+									</div>
+
+									<!----- Comentários ----->
+									<div class="border p-3 mb-3">
+										<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 g-4 mb-4">
+											<div class="col">
+												<h5>Italo Santos</h5>
+											</div>
+											<div class="col text-end">
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star-half text-warning"></i>
+											</div>
+										</div>
+										<p>
+                                            O melhor lanche de pernil que já comi. E como uma boa apreciadora de hambúrgueres não podia deixar de experimentar o hambúrguer de pernil deles né.
+                                            Simplesmente sensacional! O ponto da carne, o sabor acentuado e combinando perfeitamente com os queijos.
+                                            Comemos tbm os Beirutes de carne assada e mortadela que já eram conhecidos ao meu paladar e nunca deixam a desejar.                                           
+                                            Se vc nunca foi, esteja preparadix para um ambiente bem paulistano com muita conversa alta,
+                                            garçons gritando os pedidos e toda a diversidade de gente. Não há mesas,
+                                            somente o balcão e por estar sempre lotado é preciso esperar vagar a quantidade de lugares que deseja.
+										</p>
+									</div>
+									<div class="border p-3 mb-3">
+										<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 g-4 mb-4">
+											<div class="col">
+												<h5>Guilerme Ribas</h5>
+											</div>
+											<div class="col text-end">
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star text-warning"></i>
+												<i class="bi bi-star text-warning"></i>
+											</div>
+										</div>
+										<p>
+                                            Lugar inusitado! Pouco chamativo, mas não destoante da região.
+                                            Simples mas com excelente cardápio de boteco e também de restaurante.
+                                            Pense num local bom, com muito movimento, mas extremamente limpo e bem organizado.
+                                            Os atendentes ágeis e bem receptivos. Do amplo cardápio não posso falar muito,
+                                            pois me ative ao sanduíche de pernil de porco; Caramba, muito bom!!!!!
+                                            Recomendo conhecer esse local de muita tradição no centro de São Paulo,
+                                            a qualquer hora do dia, ou da noite. #boralá
+										</p>
+									</div>
+									<div class="border p-3 mb-3">
+										<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 g-4 mb-4">
+											<div class="col">
+												<h5>Douglas Jorge</h5>
+											</div>
+											<div class="col text-end">
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star-fill text-warning"></i>
+												<i class="bi bi-star text-warning"></i>
+											</div>
+										</div>
+										<p>
+                                            Ótima opção na região central de São Paulo. O lanche de pernil (R$ 23,00) é muito bom,
+                                            recomendo também os pratos e salgados como a coxa creme muito saborosa! O lugar é 24 horas.
+										</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-green" data-bs-toggle="collapse" data-bs-target="#collapseExample">Inserir Comentários</button>
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!------ Informações ------>
+					<table class="table">
+						<tbody>
+							<tr>
+								<td class="fw-bold text-nowrap"><i class="bi bi-telephone mx-2"></i> Telefone</td>
+								<td class="text-end">(11) 3257-7121</td>
+							</tr>
+							<tr>
+								<td class="fw-bold text-nowrap"><i class="bi bi-display mx-2"></i> Site</td>
+								<td class="text-end"><a href="https://barelanchesestadao.business.site" target="_black">https://barelanchesestadao.business.site</a></td>
+							</tr>
+							<tr>
+								<td class="fw-bold text-nowrap"><i class="fas fa-utensils mx-2"></i> Refeição no local</td>
+								<td class="text-end"><i class="bi bi-check text-success"></i></td>
+							</tr>
+							<tr>
+								<td class="fw-bold text-nowrap"><i class="bi bi-truck mx-2"></i> Entrega</td>
+								<td class="text-end"><i class="bi bi-check text-success"></i></td>
+							</tr>
+							<tr>
+								<td class="fw-bold text-nowrap"><i class="fas fa-car mx-2"></i>Estacionamento</td>
+								<td class="text-end"><i class="bi bi-check text-success"></i></td>
+							</tr>
+							<tr>
+								<td class="fw-bold text-nowrap"><i class="bi bi-shop mx-2"></i> Tipo de culinária</td>
+								<td class="text-end">Brasileira, Bar, Lanchonete, Sul-americana</td>
+							</tr>
+							<tr>
+								<td class="fw-bold text-nowrap"><i class="bi bi-currency-dollar mx-2"></i> Faixa de preço</td>
+								<td class="text-end">R$ 50 - R$ 150</td>
+							</tr>
+							<tr>
+								<td class="fw-bold"><i class="bi bi-clock mx-2"></i> Horário</td>
+								<td class="text-end text-nowrap">								
+									<div class="dropdown">
+										<div class="dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+											<strong class="text-success">Aberto</strong> 24 horas
+										</div>
+										<ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+											<li class="dropdown-item">Atendimento 24 horas ⋅ segunda-feira</li>
+											<li class="dropdown-item">Atendimento 24 horas ⋅ terça-feira</li>
+											<li class="dropdown-item">Atendimento 24 horas ⋅ quarta-feira</li>
+											<li class="dropdown-item">Atendimento 24 horas ⋅ quinta-feira</li>
+											<li class="dropdown-item">Atendimento 24 horas ⋅ sexta-feira</li>
+											<li class="dropdown-item">Atendimento 24 horas ⋅ sábado</li>
+											<li class="dropdown-item">Atendimento 24 horas ⋅ domingo</li>
+										</ul>
+									</div>								
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col">
+				
+					<!--------- Fotos --------->
+					<h4>Pratos Principais:</h4>
+					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 mb-4">
+						<div class="col">
+							<div class="card">
+								<img src="../../images/restaurantes/estadao_bar_lanches/prato_1.png" class="card-img-top" alt="Foto Sandwich de Pernil e suco de melão">
+							</div>
+						</div>
+						<div class="col">
+							<div class="card">
+								<img src="../../images/restaurantes/estadao_bar_lanches/prato_2.png" class="card-img-top" alt="Foto Sandwich de Pernil">
+							</div>
+						</div>
+						<div class="col">
+							<div class="card">
+								<img src="../../images/restaurantes/estadao_bar_lanches/prato_3.png" class="card-img-top" alt="Foto do prato com arroz, batata frita e pernil">
+							</div>
+						</div>
+					</div>
+					
+					<!------ Como Chegar ------>
+					<h4>Como Chegar:</h4>
+					<div id="map">
+					</div>
+					<div id="endereco"> </div>
+					<div id="distancia"> </div>
+					<div id="tempo"> </div>
+				</div>
+			</article>
+		</main>
+
+		<!----- Footer ----->
+		<footer>
+			<div class="container">
+				<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2">
+					<div class="col">
+						<ul class="list-unstyled d-flex text-end">
+							<li class="ms-0"><a href="#" class="text-muted"><i class="bi bi-twitter" width="24" height="24"></i></a></li>
+							<li class="ms-3"><a href="#" class="text-muted"><i class="bi bi-instagram" width="24" height="24"></i></a></li>
+							<li class="ms-3"><a href="#" class="text-muted"><i class="bi bi-facebook" width="24" height="24"></i></a></li>
+						</ul>
+						<p>Gulliver Traveller | FIAP &copy;2022 - Todos os direitos reservados.</p>
+					</div>
+					<div class="col">
+						<form method="" action="">
+							<h5>Assine a nossa newsletter</h5>
+							<p>Monthly digest of whats new and exciting from us.</p>
+							<div class="d-flex w-100 gap-2">
+								<label for="newsletter1" class="visually-hidden">Email address</label>
+								<input type="email" class="form-control" id="newsletter1" placeholder="Digite seu e-mail...">
+								<input type="submit" class="btn btn-green" value="Inscrever">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!------ JavaScript ------>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA32PDmcZkbv37_Jb-GU9ZOTu9OW4j1n4o" defer></script>
+		<script src="../../js/geolocalizacao.js"></script>
+		<script>geolocation("Viaduto Nove de Julho, 193 - Centro Histórico de São Paulo, São Paulo - SP, 01050-060");</script>
+		<!---- Accessibility ---->
+		<div vw class="enabled">
+			<div vw-access-button class="active"></div>
+			<div vw-plugin-wrapper>
+				<div class="vw-plugin-top-wrapper"></div>
+			</div>
+		</div>
+		<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+		<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+		<script type="text/javascript" src="../../js/accessibility-dark-mode.js"></script>
+	</body>
+</html>
